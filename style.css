@@ -1,0 +1,45 @@
+.bot{
+    position: relative;
+    padding: 10px;
+    height: 70px;
+    width: 150px;
+    display: inline-block;
+    justify-content: center;
+    background-color:#c6c99d;
+
+}
+
+.centrar{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: cyan; 
+    width:155px;
+
+}
+
+.cenM{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: cyan; 
+    width:305px;
+
+}
+
+.cajaB{
+    border-color: red;
+    border-width: 1px;
+    padding: 10px;
+    background-color:#6378b0;
+    width: 400px;
+    margin-block-end: auto;
+    justify-content: center;
+    /*margin-left: auto;
+    margin-right: auto;*/
+
+}
+
+canvas{
+    border-color: red;
+    background-color:#c1f0ad;
+
+}
