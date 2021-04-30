@@ -2,7 +2,7 @@
     position: relative;
     padding: 10px;
     height: 70px;
-    width: 150px;
+    width: 140px;
     display: inline-block;
     justify-content: center;
     background-color:#c6c99d;
@@ -13,7 +13,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: cyan; 
-    width:155px;
+    width:130px;
 
 }
 
@@ -21,7 +21,7 @@
     margin-left: auto;
     margin-right: auto;
     background-color: cyan; 
-    width:305px;
+    width:290px;
 
 }
 
@@ -30,7 +30,7 @@
     border-width: 1px;
     padding: 10px;
     background-color:#6378b0;
-    width: 400px;
+    width: 275px;
     margin-block-end: auto;
     justify-content: center;
     /*margin-left: auto;
@@ -40,6 +40,34 @@
 
 canvas{
     border-color: red;
-    background-color:#c1f0ad;
+    background-color:#172014;
 
+}
+
+#Escapate{
+    padding : 10px;
+    border: 10px;
+    color: blue;
+    font-size: 15px;
+    border-radius: 50px;
+    position: relative;
+    left: 10px;
+    top: 6px;
+    margin: 10px;
+}
+
+#Iniciate{
+    padding : 10px;
+    border: 10px;
+    color: black;
+    font-size: 15px;
+    border-radius: 50px;
+    position: relative;
+    left: 150px;
+    top: 6px;
+}
+
+*{
+    border: 0px;
+    margin: 0px;
 }

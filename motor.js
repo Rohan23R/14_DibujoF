@@ -7,11 +7,55 @@ var teclas = {
 
 document.addEventListener("keyup", dibujarTeclado);
 
+document.addEventListener("click", dibujaRaton);
 
 var cuadrito = document.getElementById("papelito");
 var papel = cuadrito.getContext("2d");
 var x=150;
 var y=150;
+
+var xinic;
+var yinic;
+
+var xfini;
+var yfini;
+
+var cambiador = 3;
+function dibujaRaton (cor){
+    if (cambiador == 1) {cambiador = 2} else if(cambiador == 2) {cambiador =1};
+
+    if (cambiador == 1){
+    xinic = cor.clientX;
+    yinic = cor.clientY;
+    console.log("inicio");
+    console.log(xinic + ", " + yinic);
+    dibujarLinea(papel,"orange", xinic, yinic, xinic +2, yinic+2);
+    };
+
+    if (cambiador == 2){
+    xfini = cor.clientX;
+    yfini = cor.clientY;
+      console.log("fini");
+      console.log(xfini + ", " + yfini);
+
+    dibujarLinea(papel,"orange", xinic, yinic, xfini, yfini);
+    
+    xinic = xfini;
+    yinic = yfini;
+    cambiador = 1;
+    };
+
+    if(cambiador ==4){cambiador =2}
+}
+
+function Escapate(){
+    dibujarLinea(papel,"black", xinic, yinic, xfini, yfini);
+    cambiador =3;
+}   
+
+function Iniciate(){
+    cambiador =4;
+}   
 
 dibujarLinea(papel, "red", 149, 149, 151, 151);
 
@@ -33,11 +77,15 @@ document.getElementById("bArr").onclick=dirArriba;
 document.getElementById("bAba").onclick=dirAbajo;
 document.getElementById("bIzq").onclick=dirIzquierda;
 document.getElementById("bDer").onclick=dirDerecha;
+document.getElementById("Escapate").onclick=Escapate;
+document.getElementById("Iniciate").onclick=Iniciate;
+
 }
 
 function dirArriba(){
     dibujarLinea(papel, colorete,x,y,x,y-movimiento_sensual);
     y=y-movimiento_sensual;
+    bArr.style.visibility="hidden";
 }
 
 function dirAbajo(){    
@@ -49,14 +97,13 @@ function dirIzquierda(){
     dibujarLinea(papel, colorete,x,y,x-movimiento_sensual,y);
     x=x-movimiento_sensual;
 }
- 
+
 function dirDerecha(){
     dibujarLinea(papel, colorete,x,y,x+movimiento_sensual,y);
     x=x+movimiento_sensual;
 }
 
 function dibujarTeclado(rocotito){
-
     var colorcito = "blue";
     var movimiento = 50;
 
@@ -84,3 +131,4 @@ function dibujarTeclado(rocotito){
         break;  
     }
 }
+
